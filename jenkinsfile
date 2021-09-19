@@ -1,0 +1,15 @@
+node
+{
+def mavenHome = tool name: "maven 3.8.2"
+
+stage('checkOutCode')
+{
+git branch: 'dev', credentialsId: '790d9d01-86d2-48df-b2a9-72f18105394b',
+ url: 'https://github.com/ramyaravindra-ec-apps/maven-web-application.git'
+}
+stage('Build')
+{
+    sh "${mavenHome}/bin/mvn clean package" 
+
+}
+}
