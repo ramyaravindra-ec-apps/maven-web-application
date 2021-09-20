@@ -12,8 +12,9 @@ node{
 
  stage('CheckOutCode')
  {
- git branch: 'development', credentialsId: '12993250-1ff3-40a0-9978-794e74dcf712', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
- 
+ //git branch: 'development', credentialsId: '12993250-1ff3-40a0-9978-794e74dcf712', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+ git branch: 'dev', credentialsId: '790d9d01-86d2-48df-b2a9-72f18105394b',
+ url: 'https://github.com/ramyaravindra-ec-apps/maven-web-application.git'
 }
  
  stage('Build')
@@ -38,7 +39,7 @@ node{
  }
  }
  
- */
+ 
  
  stage('SendEmailNotification'){
    emailext body: '''Build is over !!
@@ -48,5 +49,5 @@ node{
    9980923226''', subject: 'Build Over... !!', to: 'devopstrainingblr@gmail.com'
  }
  
- 
+ */
 }
