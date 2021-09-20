@@ -10,7 +10,7 @@ node{
        echo "Jenkins URL ${env.JENKINS_URL}"
        echo "JOB Name ${env.JOB_NAME}"
 
- stage('CheckOutCode')
+ stage('CheckOutCodeFromGit')
  {
 // git branch: 'development', credentialsId: '12993250-1ff3-40a0-9978-794e74dcf712', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
  git branch: 'dev', credentialsId: '790d9d01-86d2-48df-b2a9-72f18105394b',
